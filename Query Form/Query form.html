@@ -1,0 +1,182 @@
+<html>
+<head>
+     <title>Saturn Store</title>
+     <link href="style.css" rel="stylesheet" type="text/css">
+	 
+	<script>
+
+
+		function checkforblank() {
+			if (document.getElementById("name").value == "") {
+				alert("Please enter your name");
+				return false;
+				}
+			else if (document.getElementById("email").value == "") {
+				alert("Please enter your email");
+				return false;
+				}
+			
+			else if (document.getElementById("subject").value == "") {
+				alert("Please enter a subject");
+				return false;
+				}			
+
+
+			else if (document.getElementById("details").value == "") {
+				alert("Please type something in 'Details' ");
+				return false;
+				}	
+
+			
+			}	
+
+			
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+		src="jquery.vide.js"
+			
+				
+	</script>
+	 
+	<script type="text/javascrip">
+		document.write.(document.getElementById("form1").innerHTML)
+	</script>
+	 
+	 
+</head>
+<body>
+    <div class="header">
+	
+	    <video autoplay loop class="back-video" muted plays-inline>
+		    <source src="media/video.mp4" type="video/mp4">
+		</video> 
+		
+	    <nav>
+		    <img src="media/saturn.png" class="logo">
+			<ul class="nav-links">
+			    <li><a href="../Homepage.html">HOME</a></li>
+				<li><a href="../Vinuks products page/home.html">SHOP</a></li>
+	            <li><a href="">QUERY FORM</a></li>
+				<li><a href="../quiz.html">QUIZ</a></li>
+				<li><a href="../sitecss/sitemap.html">SITE MAP</a></li>
+				<li><a href="../Thumbnails/Index.html">LATEST</a></li>
+				<li><a href="../aboutuspage.html">ABOUT US</a></li>
+            </ul>
+        </nav>
+    
+			
+
+	
+	
+
+
+	<div class="container">
+		<form action="mailto:ravindu.20211508@iit.ac.lk" method="post" enctype:"text/plain" onsubmit="return checkforblank()">
+	
+			<h3>Queries</h3>
+			
+			<div>
+				<input type="radio" name="query" id="inquiry" value="More details about a product"/>
+				<label for="inquiry">More details about a product</label>
+				
+				<input type="radio" name="query" id="complain" value="A Complain"/>			
+				<label for="complain">Complain</label>
+				
+				
+				<input type="radio" name="query" id="tech support" value="Techinical Support"/>
+				<label for="tech support">Technical Support</label>			
+				
+			</div>
+			
+			<div>
+				<input type="text" id="name" placeholder="Your Name"/>
+			</div>
+			
+			<div>
+				<input type="email" id="email" placeholder="Email"/>
+			</div>
+			
+			<div>
+			<input type="subject" id="subject" placeholder="Subject" />
+			</div>
+			
+			<div>
+			<textarea id="details" rows="4" placeholder="Details"></textarea>
+			</div>
+			
+			
+			<button onclick="getView()">View</button>
+			<button type="reset">Edit</button>
+			<button type="submit">Send</button>
+		
+
+
+	<div id="dataView">
+		<p id="output1"></p>
+		<p id="output2"></p>
+		<p id="output3"></p>
+		<p id="output4"></p>
+	</div>
+		
+		
+		
+		</form>
+		
+		
+		
+		<script>
+		function getView(){
+			var text = document.getElementById("name").value;
+			output1.innerHTML = "Name: " + text;
+			
+			var text = document.getElementById("email").value;
+			output2.innerHTML = "Email: " + text;			
+			
+			var text = document.getElementById("subject").value;
+			output3.innerHTML = "Subject: " + text;			
+			
+			var text = document.getElementById("details").value;
+			output4.innerHTML = "Details: " + text;			
+			
+		}
+		
+		
+		
+		</script>
+	
+	</div>
+	
+	
+
+	
+	
+
+	
+	
+
+	
+
+		<footer>
+			<div class="footer">
+				<div class = "container">
+					<div class ="row">
+						<div class ="footer-col-2">
+							<img src ="saturn.png" id="footer-logo" alt="logo" class="footer-img">
+							<div class="editor">
+								<p>Made By <a href="../ravindu editors page.html" id="editor-link">Ravindu Ariyarathne</a></p>
+							</div>
+							<div class="one-line">
+							<p>"Our goal is to consistently make gadgets beneficial for as many people as possible."</p>
+							</div>
+						</div> 	
+					</div>
+					<div>
+					<hr>
+					<p class ="copyright">Copyright 2022</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	
+	
+</body>
+</html>

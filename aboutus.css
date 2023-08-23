@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+	font-family: "poppins", sans-serif;
+    box-sizing: border-box;
+}	
+.header{
+    height: 100vh;
+    width: 100%;
+    padding: 0 8%;
+    position: relative;
+}
+
+.category-list{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 40px;
+}
+.category{
+	width: 80px;
+	height: 80px;
+	background: rgba(255,61,0,0.15);
+	margin: 0 10px;
+}	
+
+main{
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.card-holder {
+	display: flex;
+	grid-template-columns: 700px 700px;
+	grid-template-rows: 600px 600px;
+	justify-content: center;
+}
+
+.card{
+	position: relative;
+	top: 50%;
+	left: 10%;
+	transform: translate(-50%, -10%);
+	width: 200px;
+	height: 250px;
+	margin-top: 10px;
+	transform-style: preserve-3d;
+	perspective: 600px;
+	transition: 0.5s;	
+}
+.card .front {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #964B00;
+	box-shadow: 0 0 160px #964B00;
+	backface-visibility: hidden;
+	transform: rotateX(0deg);
+	transition: 0.5s;
+	border-radius: 80px;
+}
+.card:hover .front {
+	transform: rotateX(-180deg);
+}
+.card .back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+	background: #964B00;
+	backface-visibility: hidden;
+	transform: rotateX(180deg);
+	transition: 0.5s;
+}
+.card .back:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.card:hover .back {
+	transform: rotateX(0deg);
+}
+
+.card .back .details {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	width: 100%;
+	text-align: center;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.card .back .details h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 24px;
+	color: #fff;
+}
+
+.card .back .details h2 span {
+	color: #a7a7a7;
+	font-size: 16px;
+}
+	
+.one-line{
+	position: relative;
+	left: 20%;
+	top: 50%;
+	width: 100%;
+    transform: translate(-15%,-300%);
+	font-size: 24px;
+}
+.editor{
+    position: relative;
+	left: 20%;
+	top: 50%;
+	width: 100%;
+    transform: translate(18%, -700%);
+	color: #ffffff;
+}
+			
+html,body{
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	overflow-x: hidden;
+}

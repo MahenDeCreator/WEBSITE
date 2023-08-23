@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+<head>
+     <meta charset="UTF-8">
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Quiz Page</title>
+     <link rel="stylesheet" href="quiz-css/style.css">
+</head>
+<body>
+    <div class="header">
+	
+	    <video autoplay loop class="back-video" muted plays-inline>
+		    <source src="media/video.mp4" type="video/mp4">
+		</video> 
+	    <nav>
+		    <img src="media/saturn.png" class="logo">
+			<ul class="nav-links">
+			    <li><a href="../WEBSITE/Homepage.html">HOME</a></li>
+				<li><a href="../WEBSITE/Vinuks products page/home.html">SHOP</a></li>
+	            <li><a href="../WEBSITE/Query form/Query form.html">QUERY FORM</a></li>
+				<li><a href="../WEBSITE/Vinuks products page/home.html">QUIZ</a></li>
+				<li><a href="../WEBSITE/sitecss/sitemap.html">SITE MAP</a></li>
+				<li><a href="../WEBSITE/Thumbnails/index.html">LATEST</a></li>
+				<li><a href="aboutuspage.html">ABOUT US</a></li>
+            </ul>
+        </nav>
+    <div class="start_btn"><button>Quiz</button></div>	
+    <div class="info_box">
+        <div class="info-title"><span>Rules and Regulations regarding this Quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. You will have only <span>60 seconds</span> for all the question.</div>
+            <div class="info">2. You will have 10 Questions to answer. You'll recieve badges according to your score out of 10 and there are chances of not getting a badge if your score is very low.</div>
+            <div class="info">2. Once you click on an answer, it cannot be changed for any reason.</div>
+            <div class="info">3. Once the time is over, the correct answer will be already selected and -1 deducted.</div>
+            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+            <div class="info">5. Each correct answer will get 2 points.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit Quiz</button>
+            <button class="restart">Continue</button>
+        </div>
+    </div>
+    <div class="quiz_box">
+                <header>
+            <div class="title">Saturn Store Quiz "SSQ"</div>
+            <div class="timer">
+                <div class="time_left_txt">Time Left</div>
+                <div class="timer_sec">06</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+            </div>
+            <div class="option_list">
+            </div>
+        </section>
+        <footer>
+            <div class="total_que">
+            </div>
+            <button class="next_btn">Next Question</button>
+        </footer>
+    </div>
+
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">You've completed the SSQ!</div>
+        <div class="score_text"></div>
+        <div class="buttons">
+            <button class="restart">Play again</button>
+            <button class="quit">Quit SSQ</button>
+        </div>
+    </div>
+
+    <canvas id="my-canvas"></canvas>
+
+
+    <script src="quiz-js/questions.js"></script>
+
+
+    <script src="quiz-js/script.js"></script>
+	    <footer>
+			<div class="footer">
+				<div class = "container">
+					<div class ="row">
+						<div class ="footer-col-2">
+							<img src ="media/saturn.png" id="footer-logo" alt="logo" class="footer-img">
+							<div class="editor">
+								<p>Made By <a href="../WEBSITE/abhinaveditorspage.html" id="editor-link">Abhinav Ratnathurai</a></p>
+							</div>
+							<div class="one-line">
+							<p>"Our goal is to consistently make gadgets beneficial for as many people as possible."</p>
+							</div>
+						</div> 	
+					</div>
+					<div>
+					<hr>
+					<p class ="copyright">Copyright 2022</p>
+					</div>
+				</div>
+			</div>
+		</footer>	
+</body>
+</html>

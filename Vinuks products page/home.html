@@ -1,0 +1,197 @@
+<html>
+<html lang="en">
+  <head>		
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/8f27d68390.js"
+      crossorigin="anonymous"
+    ></script>
+	
+	<script>
+	  function showAndClearField(frm){
+     if (frm.firstName.value=="")
+	    alert("Name feild is missing")
+     else 
+	    alert("The feild contains the text: " + frm.firstName.value)
+	 frm.firstName.value=""
+	 }
+  function This(frm){
+     if (frm.email.value=="")
+	    alert("Email feild is missing")
+     else 
+	    alert("The feild contains the text: " + frm.email.value)
+	 frm.email.value=""
+	 }
+	 	 function submitt(frm){
+	     if (frm.firstName.value=="")
+	       alert("Name feild is missing")
+		 else if (frm.email.value=="")
+	    alert("Email feild is missing") 
+			}
+	const wrapper = document.querySelector('.wrapper'),
+	      form    = wrapper.querySelectorAll('.form'),
+		  submitInput = form[0].querySelector('input[type="submit"]');
+		  
+	function getDataForm(e){
+        e.preventDefault();
+		var formData = new FormData(form[0]);
+		alert(formData.get('name'));
+		}
+		document.addEventListner('DOMContentLoaded',function(){
+		submitInput.addEventListner('click',getDataForm,false);
+		},false);
+	
+	</script>
+     <title>Saturn Store</title>
+     <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="header">
+	
+	    <video autoplay loop class="back-video" muted plays-inline>
+		    <source src="media/video.mp4" type="video/mp4">
+		</video> 
+		
+	    <nav>
+		    <img src="media/saturn.png" class="logo">
+			<ul class="nav-links">
+			    <li><a href="../Homepage.html">HOME</a></li>
+				<li><a href="">SHOP</a></li>
+	            <li><a href="../Query form/Query form.html">QUERY FORM</a></li>
+				<li><a href="../quiz.html">QUIZ</a></li>
+				<li><a href="../sitecss/sitemap.html">SITE MAP</a></li>
+				<li><a href="../Thumbnails/Index.html">LATEST</a></li>
+				<li><a href="../aboutuspage.html">ABOUT US</a></li>
+            </ul>
+        </nav>
+    
+    <div class="content">
+      
+			
+	</div> 
+	    <header>
+      
+      <div class="cart-box">
+        <div class="cart-icon">
+          <i style="color:red" class="fas fa-cart-arrow-down fa-2x"></i>
+        </div>
+        <div class="whole-cart-window hide">
+          <h2>Cart</h2>
+          <div class="cart-wrapper">
+
+          </div>
+          <div class="subtotal">Subtotal: $0.00</div>
+		  <div class="wrapper">
+		  <form class="form" action="" method="GET">
+		  <p>Enter your name: <input type="text" name="firstName" id="name"></br>
+		  <input type="button" value="clear" onclick="showAndClearField(this.form)">
+          </p>
+		  
+		  <p>Enter your email: <input type="email" name="email" id="email1"></br>
+		  <input type="button" value="clear" onclick="This(this.form)">
+          </p>
+		  <input type="submit" value="Place order" onclick="submitt(this.form)">
+		  
+		  </form>
+          </div>
+          
+		  
+        </div>
+      </div>
+    </header>
+	
+    <section class="shop-section">
+      <div class="card-wrapper">
+        <div data-id="1" class="card-item">
+		<!--product 1-->
+          <img src="media/ipone13.jpg">
+          <div class="details">
+            <h3 style="color:white;">Iphone 12</h3>
+            <p>
+			   <span style="color:white;" >
+                A superpowerful chip. 5G speed. An advanced dual camera system.
+              </span>
+              <span style="color:white;" class="price">Price: $ 830.00</span>
+              <span class="add-to-cart-btn">Add To Cart</span>
+            </p>
+          </div>
+        </div>
+        <!-- item 2 -->
+        <div data-id="2" class="card-item">
+          <img src="media/watch5.jpg">
+          <div class="details">
+            <h3 style="color:white;">Apple watch series 7</h3>
+            <p>
+			  <span style="color:white;" >
+                Series 7 represents our biggest and brightest thinking.
+              </span>
+              
+
+              <span style="color:white;" class="price">Price: $399.00</span>
+              <span class="add-to-cart-btn">Add To Cart</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- product 3 -->
+        <div data-id="3" class="card-item">
+          <img src="media/ps55.jpg" />
+          <div class="details">
+            <h3 style="color:white;">Play Station 5</h3>
+            <p>
+			  <span style="color:white;" >
+                Experence the true power of play.
+              </span>
+             
+              <span style="color:white;" class="price">Price: $499.99</span>
+              <span class="add-to-cart-btn">Add To Cart</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- product 4 -->
+        <div data-id="4" class="card-item">
+          <img src="media/nin4.jpg" />
+          <div class="details">
+            <h3 style="color:white;">Nintendo switch</h3>
+            <p>
+			  <span style="color:white;" >
+                Nintendo Switch is designed to fit your everydaylife.
+              </span>
+
+              <span style="color:white;" class="price">Price: $299.99</span>
+              <span class="add-to-cart-btn">Add To Cart</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+			<footer>
+			<div class="footer">
+				<div class = "container">
+					<div class ="row">
+						<div class ="footer-col-2">
+							<img src ="media/saturn.png" id="footer-logo" alt="logo" class="footer-img">
+							<div class="editor">
+								<p>Made By <a href="../Vinuk editors page.html" id="editor-link">Vinuk Senadeera</a></p>
+							</div>
+							<div class="one-line">
+							<p style="color:white">"Our goal is to consistently make gadgets beneficial for as many people as possible."</p>
+							</div>
+						</div> 	
+					</div>
+					<div>
+					<hr>
+					<p style="color:white;" class ="copyright">Copyright 2022</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	
+</body>
+</html>
